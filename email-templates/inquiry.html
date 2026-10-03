@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <!--
+    Maver Music Agency — new project inquiry (sent to the agency inbox).
+    EmailJS variables: {{name}} {{email}} {{artist}} {{service}} {{stage}} {{message}} {{logo_url}} {{site_url}}
+  -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>New project inquiry</title>
+  </head>
+  <body style="margin:0; padding:0; background-color:#07070f;">
+    <div style="display:none; max-height:0; overflow:hidden; opacity:0;">
+      New inquiry from {{name}} — {{service}} ({{stage}})
+    </div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#07070f;">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;">
+            <!-- Logo -->
+            <tr>
+              <td align="center" style="padding:8px 0 24px;">
+                <img src="{{logo_url}}" width="150" alt="Maver Music Agency" style="display:block; width:150px; max-width:150px; height:auto; border:0;" />
+              </td>
+            </tr>
+
+            <!-- Card -->
+            <tr>
+              <td style="background-color:#11111f; border:1px solid #26263d; border-radius:24px; overflow:hidden;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="4" style="height:4px; line-height:4px; font-size:0; background-color:#8b6cf6; background-image:linear-gradient(90deg,#c58cf5,#8b6cf6,#5b5cf0); border-radius:24px 24px 0 0;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:36px 36px 8px; font-family:'Space Grotesk',Arial,Helvetica,sans-serif;">
+                      <span style="display:inline-block; padding:6px 14px; border-radius:999px; background-color:#1d1a38; border:1px solid #3a3266; color:#c58cf5; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase;">● New project inquiry</span>
+                      <h1 style="margin:20px 0 8px; color:#ffffff; font-size:30px; line-height:1.15; font-weight:600;">{{name}} wants to build something.</h1>
+                      <p style="margin:0; color:#a9a9c4; font-size:15px; line-height:1.6; font-family:Arial,Helvetica,sans-serif;">A new brief just came in through the website. Reply directly to this email to reach them.</p>
+                    </td>
+                  </tr>
+
+                  <!-- Details -->
+                  <tr>
+                    <td style="padding:24px 36px 8px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0b0b17; border:1px solid #23233a; border-radius:16px;">
+                        <tr>
+                          <td style="padding:16px 20px; border-bottom:1px solid #1d1d31; font-family:Arial,Helvetica,sans-serif;">
+                            <div style="color:#7d7d9c; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">Name</div>
+                            <div style="margin-top:4px; color:#ffffff; font-size:16px;">{{name}}</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding:16px 20px; border-bottom:1px solid #1d1d31; font-family:Arial,Helvetica,sans-serif;">
+                            <div style="color:#7d7d9c; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">Email</div>
+                            <div style="margin-top:4px; font-size:16px;"><a href="mailto:{{email}}" style="color:#c58cf5; text-decoration:none;">{{email}}</a></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding:16px 20px; border-bottom:1px solid #1d1d31; font-family:Arial,Helvetica,sans-serif;">
+                            <div style="color:#7d7d9c; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">Artist / brand</div>
+                            <div style="margin-top:4px; color:#ffffff; font-size:16px;">{{artist}}</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding:16px 20px; font-family:Arial,Helvetica,sans-serif;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td width="50%" valign="top">
+                                  <div style="color:#7d7d9c; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">Service</div>
+                                  <div style="margin-top:8px;"><span style="display:inline-block; padding:6px 12px; border-radius:999px; background-color:#8b6cf6; color:#ffffff; font-size:13px; font-weight:600;">{{service}}</span></div>
+                                </td>
+                                <td width="50%" valign="top">
+                                  <div style="color:#7d7d9c; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">Project stage</div>
+                                  <div style="margin-top:8px;"><span style="display:inline-block; padding:6px 12px; border-radius:999px; background-color:#1d1a38; border:1px solid #3a3266; color:#c58cf5; font-size:13px; font-weight:600;">{{stage}}</span></div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Message -->
+                  <tr>
+                    <td style="padding:16px 36px 8px; font-family:Arial,Helvetica,sans-serif;">
+                      <div style="color:#7d7d9c; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">About the project</div>
+                      <div style="margin-top:10px; padding:18px 20px; background-color:#0b0b17; border:1px solid #23233a; border-left:3px solid #8b6cf6; border-radius:12px; color:#e6e6f2; font-size:15px; line-height:1.7; white-space:pre-line;">{{message}}</div>
+                    </td>
+                  </tr>
+
+                  <!-- CTA -->
+                  <tr>
+                    <td align="center" style="padding:28px 36px 40px;">
+                      <a href="mailto:{{email}}?subject=Re:%20Your%20project%20with%20Maver%20Music%20Agency" style="display:inline-block; padding:15px 32px; border-radius:999px; background-color:#8b6cf6; background-image:linear-gradient(100deg,#c58cf5,#8b6cf6,#5b5cf0); color:#ffffff; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none;">Reply to {{name}} &rarr;</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td align="center" style="padding:28px 16px 8px; font-family:Arial,Helvetica,sans-serif; color:#6b6b88; font-size:12px; line-height:1.7;">
+                Sent from the contact form on <a href="{{site_url}}" style="color:#a9a9c4; text-decoration:none;">Maver Music Agency</a><br />
+                Make your sound seen.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
