@@ -10,7 +10,7 @@ import {
   SectionHeading,
   serviceIcons,
 } from "@/components/site/shared";
-import heroImage from "@/assets/maver-hero.jpg";
+import { serviceImage } from "@/data/service-images";
 
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
@@ -53,13 +53,13 @@ function ServicePage() {
       <main>
         <section className="grain relative isolate overflow-hidden pb-20 pt-36 lg:pb-28 lg:pt-44">
           <img
-            src={heroImage}
+            src={serviceImage(service.slug)}
             alt=""
             width={1920}
             height={1088}
-            className="absolute inset-0 -z-20 h-full w-full object-cover opacity-40"
+            className="absolute inset-0 -z-20 h-full w-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-background/85 to-background" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/50 via-background/80 to-background" />
           <div className="pointer-events-none absolute -left-32 top-10 -z-10 h-[28rem] w-[28rem] rounded-full bg-brand-violet/25 blur-[120px]" />
           <div className="mx-auto max-w-[1320px] px-5 lg:px-10">
             <nav

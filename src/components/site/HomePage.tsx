@@ -26,6 +26,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { CONTACT_EMAIL, services } from "@/data/site";
+import { serviceImage } from "@/data/service-images";
 import {
   Eyebrow,
   Footer,
@@ -552,7 +553,7 @@ function Services() {
             className="reveal group gradient-ring relative isolate flex min-h-[340px] flex-col justify-end overflow-hidden rounded-3xl p-7 sm:col-span-2 sm:p-9"
           >
             <img
-              src={releaseCampaign}
+              src={serviceImage(featured.slug)}
               alt=""
               width={1024}
               height={1024}
@@ -590,43 +591,46 @@ function Services() {
                 key={service.slug}
                 to="/services/$slug"
                 params={{ slug: service.slug }}
-                className="reveal group surface spotlight relative flex items-center gap-4 overflow-hidden rounded-2xl p-4 transition-all duration-300 hover:-translate-y-1 hover:border-brand-violet/40 sm:flex-col sm:items-stretch sm:gap-0 sm:rounded-3xl sm:p-7"
+                className="reveal group relative isolate flex h-[300px] flex-col overflow-hidden rounded-3xl border border-foreground/10 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand-violet/50 hover:shadow-[0_30px_60px_-30px_color-mix(in_oklab,var(--brand-violet)_70%,transparent)] sm:h-[380px] sm:p-7"
               >
-                <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-brand-violet/0 blur-2xl transition-colors duration-500 group-hover:bg-brand-violet/30" />
-                <div className="relative flex shrink-0 items-start justify-between">
-                  <span className="grid h-12 w-12 place-items-center rounded-2xl border border-foreground/10 bg-foreground/[0.04] text-brand-lilac transition-all duration-300 group-hover:border-transparent group-hover:bg-brand-violet group-hover:text-foreground">
+                <img
+                  src={serviceImage(service.slug)}
+                  alt=""
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  className="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background via-background/70 to-background/5 transition-opacity duration-500" />
+                <div className="absolute inset-0 -z-10 bg-brand-violet/0 mix-blend-soft-light transition-colors duration-500 group-hover:bg-brand-violet/30" />
+
+                <div className="flex items-start justify-between">
+                  <span className="glass grid h-12 w-12 place-items-center rounded-2xl text-brand-lilac transition-all duration-300 group-hover:border-transparent group-hover:bg-brand-violet group-hover:text-foreground">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <span className="hidden font-display text-sm text-muted-foreground sm:inline">
+                  <span className="glass rounded-full px-3 py-1 font-display text-xs text-foreground/80">
                     {String(index + 2).padStart(2, "0")}
                   </span>
                 </div>
-                <div className="relative min-w-0 flex-1 sm:flex-none">
-                  <h3 className="text-lg font-medium sm:mt-8 sm:text-2xl">{service.title}</h3>
-                  <p className="mt-0.5 text-sm leading-6 text-muted-foreground sm:mt-2">
-                    {service.tagline}
-                  </p>
+
+                <div className="mt-auto">
+                  <h3 className="text-2xl font-medium">{service.title}</h3>
+                  <p className="mt-1.5 text-sm leading-6 text-foreground/75">{service.tagline}</p>
+                  <div className="mt-4 flex flex-wrap gap-1.5 transition-all duration-500 sm:max-h-0 sm:overflow-hidden sm:opacity-0 sm:group-hover:max-h-24 sm:group-hover:opacity-100">
+                    {service.items.slice(0, 3).map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border border-foreground/15 bg-background/50 px-2.5 py-1 text-[0.7rem] text-foreground/85 backdrop-blur-md"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-foreground/90 transition-colors group-hover:text-brand-lilac">
+                    Explore service{" "}
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </div>
-                <ArrowRight className="relative h-5 w-5 shrink-0 text-muted-foreground sm:hidden" />
-                <div className="relative mt-6 hidden flex-wrap gap-1.5 sm:flex">
-                  {service.items.slice(0, 3).map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full bg-foreground/[0.05] px-2.5 py-1 text-[0.7rem] text-foreground/75"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                  {service.items.length > 3 && (
-                    <span className="rounded-full px-2 py-1 text-[0.7rem] text-muted-foreground">
-                      +{service.items.length - 3} more
-                    </span>
-                  )}
-                </div>
-                <span className="relative mt-auto hidden items-center gap-2 pt-8 text-sm font-medium text-foreground/80 transition-colors group-hover:text-brand-lilac sm:inline-flex">
-                  Explore service{" "}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
               </Link>
             );
           })}
