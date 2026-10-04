@@ -1,34 +1,38 @@
+// Service cover photos from Unsplash (free for commercial use under the Unsplash License).
 import heroImage from "@/assets/maver-hero.jpg";
-import introImage from "@/assets/maver-intro.jpg";
-import strategyImage from "@/assets/maver-strategy.jpg";
-import visualStudy from "@/assets/work-visual-study.jpg";
-import sonicArchitecture from "@/assets/work-sonic-architecture.jpg";
-import releaseCampaign from "@/assets/work-release-campaign.jpg";
-import liveSignal from "@/assets/work-live-signal.jpg";
-import frequency from "@/assets/work-frequency.jpg";
-import liveWorld from "@/assets/work-live-world.jpg";
-import artistIdentity from "@/assets/work-artist-identity.jpg";
-import platformLaunch from "@/assets/work-platform-launch.jpg";
-import pressKit from "@/assets/work-press-kit.jpg";
-import digitalPresence from "@/assets/work-digital-presence.jpg";
+import musicGrowth from "@/assets/services/music-growth.jpg";
+import musicDistribution from "@/assets/services/music-distribution.jpg";
+import musicVideos from "@/assets/services/music-videos.jpg";
+import animation3d from "@/assets/services/3d-animation.jpg";
+import motionDesign from "@/assets/services/motion-design.jpg";
+import musicVisuals from "@/assets/services/music-visuals.jpg";
+import artworkCoverDesign from "@/assets/services/artwork-cover-design.jpg";
+import artistBranding from "@/assets/services/artist-branding.jpg";
+import socialContent from "@/assets/services/social-content.jpg";
+import djLiveVisuals from "@/assets/services/dj-live-visuals.jpg";
+import vfxCinematic from "@/assets/services/vfx-cinematic.jpg";
+import digitalPresence from "@/assets/services/digital-presence.jpg";
+import googleDigitalIdentity from "@/assets/services/google-digital-identity.jpg";
+import pressMedia from "@/assets/services/press-media.jpg";
+import artistDevelopment from "@/assets/services/artist-development.jpg";
 
 /** Cover image for each service, used on the home grid and the service detail hero. */
 export const serviceImages: Record<string, string> = {
-  "music-growth": releaseCampaign,
-  "music-distribution": platformLaunch,
-  "music-videos": liveSignal,
-  "3d-animation": visualStudy,
-  "motion-design": liveWorld,
-  "music-visuals": sonicArchitecture,
-  "artwork-cover-design": frequency,
-  "artist-branding": artistIdentity,
-  "social-content": introImage,
-  "dj-live-visuals": strategyImage,
-  "vfx-cinematic": heroImage,
+  "music-growth": musicGrowth,
+  "music-distribution": musicDistribution,
+  "music-videos": musicVideos,
+  "3d-animation": animation3d,
+  "motion-design": motionDesign,
+  "music-visuals": musicVisuals,
+  "artwork-cover-design": artworkCoverDesign,
+  "artist-branding": artistBranding,
+  "social-content": socialContent,
+  "dj-live-visuals": djLiveVisuals,
+  "vfx-cinematic": vfxCinematic,
   "digital-presence": digitalPresence,
-  "google-digital-identity": digitalPresence,
-  "press-media": pressKit,
-  "artist-development": strategyImage,
+  "google-digital-identity": googleDigitalIdentity,
+  "press-media": pressMedia,
+  "artist-development": artistDevelopment,
 };
 
 export const serviceImage = (slug: string) => serviceImages[slug] ?? heroImage;
